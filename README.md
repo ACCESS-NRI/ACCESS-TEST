@@ -1,11 +1,8 @@
-# model-deployment-template
+# ACCESS-TEST
 
-A template repository for the deployment of `spack`-based models.
+A Spack environment for testing ACCESS-NRI infrastructure.
 
-> [!NOTE]
-> Feel free to replace this README with information on the model once the TODOs have been ticked off.
-
-## Things TODO to get your model deployed
+## TODO
 
 ### Settings
 
@@ -64,19 +61,3 @@ Regarding the secrets and variables that must be created:
 
 * Reminder that these workflows use `vars.NAME` (as well as inherit the above environment secrets) and hence these must be set.
 * If the name of the root SBD for the model (in [`spack-packages`](https://github.com/ACCESS-NRI/spack-packages/tree/main/packages)) is different from the model name (for example, `ACCESS-ESM1.5`s root SBD is `access-esm1p5`), you must uncomment and set the `jobs.[pr-ci|pr-comment].with.root-sbd` line to the appropriate SBD name.
-
-#### In `config/versions.json`
-
-* `.spack` must be given a version. For example, it will clone the associated `releases/VERSION` branch of `ACCESS-NRI/spack` if you give it `VERSION`.
-* `.spack-packages` should also have a CalVer-compliant tag as the version. See the [associated repo](https://github.com/ACCESS-NRI/spack-packages/tags) for a list of available tags.
-* `.spack-config` should also have a CalVer-compliant tag as the version. See the [associated repo](https://github.com/ACCESS-NRI/spack-config/tags) for a list of available tags.
-
-#### In `spack.yaml`
-
-There are a few TODOs for the `spack.yaml`:
-
-* `spack.specs`: Set the root SBD as the only element of `spack.specs`. This must also have an `@git.YEAR.MONTH.MINOR` version as it is the version of the entire deployment (and indeed will be a tag in this repository).
-* `spack.packages.*`: In this section, you can specify the versions and variants of dependencies. Note that the first element of the `spack.packages.*.require` must be only a version. Variants and other configuration can be done on subsequent lines.
-* `spack.packages.all`: Can set configuration for all packages. For example, the compiler used, or the target architecture.
-* `spack.modules.default.tcl.include`: List of package names that will be explicitly included and available to `module load`.
-* `spack.modules.default.tcl.projections`: For included modules, you must set the name of the module to be the same as the `spack.packages.*.require[0]` version, without the `@git.`.
