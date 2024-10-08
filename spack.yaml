@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - access-test@git.2024.09.20
+    - access-test@git.2024.09.21
   packages:
     oasis3-mct:
       require:
