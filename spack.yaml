@@ -50,4 +50,4 @@ spack:
         projections:
           all: '{name}/{version}'
           access-test: '{name}/2024.09.21'
-          oasis3-mct: '{name}/9999.99.99'  # This should fail
+          oasis3-mct: '{name}/2023.11.09'  # This should succeed
