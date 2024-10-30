@@ -21,7 +21,7 @@ jobs:
   pr-ci:
     name: CI
     if: github.event_name == 'pull_request' && github.event.action != 'closed'
-    uses: access-nri/build-cd/.github/workflows/ci.yml@main
+    uses: access-nri/build-cd/.github/workflows/ci.yml@153-less-restrictive-projections
     with:
       model: ${{ vars.NAME }}
       # root-sbd: if different from vars.NAME
