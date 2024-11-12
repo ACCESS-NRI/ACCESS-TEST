@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - access-test@git.2024.09.20
+    - access-test@git.2024.11.12
   packages:
     oasis3-mct:
       require:
@@ -29,26 +29,10 @@ spack:
     unify: true
   modules:
     default:
-      enable:
-        - tcl
-      roots:
-        tcl: $spack/../release/modules
-        lmod: $spack/../release/lmod
       tcl:
-        hash_length: 0
         include:
-          # Explicitly, which packages are accessible as modules
           - access-test
           - oasis3-mct
-        exclude_implicits: true
-        all:
-          autoload: run
-          conflict:
-            - '{name}'
-          environment:
-            set:
-              'SPACK_{name}_ROOT': '{prefix}'
         projections:
-          all: '{name}/{version}'
-          access-test: '{name}/2024.09.20'
-          oasis3-mct: '{name}/2023.11.09'
+          access-test: '{name}/2024.11.12-{hash:7}'
+          oasis3-mct: '{name}/2023.11.09-{hash:7}'
