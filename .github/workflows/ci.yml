@@ -27,7 +27,7 @@ jobs:
     with:
       model: ${{ vars.NAME }}
       # root-sbd: if different from vars.NAME
-      pr: ${{ github.event_name == 'pull_request' && github.head_ref || github.event.issue.number }}
+      pr: ${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.event.issue.number }}
     permissions:
       pull-requests: write
       contents: write
@@ -41,7 +41,7 @@ jobs:
     with:
       model: ${{ vars.NAME }}
       # root-sbd: if different from vars.NAME
-      pr: ${{ github.event.issue.number }}
+      pr: ${{ github.event.pull_request.number }}
     permissions:
       pull-requests: write
       contents: write
@@ -52,5 +52,5 @@ jobs:
     uses: access-nri/build-cd/.github/workflows/ci-closed.yml@173-redeploy-comment-command
     with:
       model: ${{ vars.NAME }}
-      pr: ${{ github.head_ref }}
+      pr: ${{ github.event.pull_request.number }}
     secrets: inherit
