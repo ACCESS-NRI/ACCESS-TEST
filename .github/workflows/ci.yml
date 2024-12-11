@@ -37,7 +37,7 @@ jobs:
   pr-comment:
     name: Comment
     if: github.event_name == 'issue_comment'
-    uses: access-nri/build-cd/.github/workflows/ci-comment.yml@v2
+    uses: access-nri/build-cd/.github/workflows/ci-comment.yml@109-bump-major-comment-fix
     with:
       model: ${{ vars.NAME }}
       # root-sbd: if different from vars.NAME
