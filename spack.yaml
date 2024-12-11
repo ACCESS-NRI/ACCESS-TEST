@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - access-test@git.2024.12.0
+    - access-test@git.2024.12.1
   packages:
     oasis3-mct:
       require:
@@ -34,5 +34,5 @@ spack:
           - access-test
           - oasis3-mct
         projections:
-          access-test: '{name}/2024.12.0'
+          access-test: '{name}/2024.12.1'
           oasis3-mct: '{name}/2023.11.09-{hash:7}'
