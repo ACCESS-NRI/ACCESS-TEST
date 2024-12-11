@@ -44,6 +44,7 @@ jobs:
     permissions:
       pull-requests: write
       contents: write
+    secrets: inherit
 
   pr-closed:
     name: Closed
