@@ -1,7 +1,7 @@
 # This is a Spack Environment file testing multi-target deployments.
 #
 # It describes a set of packages to be installed, along with
-# configuration settings.
+#  configuration settings.
 spack:
   specs:
     - access-test@git.2024.11.15
