@@ -51,5 +51,3 @@ jobs:
     with:
       model: ${{ vars.NAME }}
     secrets: inherit
-  ci-comment:
-    secrets: inherit
