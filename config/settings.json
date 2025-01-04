@@ -19,7 +19,7 @@
         }
       }
     },
-    "Gadi Test": {
+    "GadiTest": {
       "Prerelease": {
         "0.22": {
           "spack": "21da7d7e2b5e2680cd9d2e0a2fb4a7d13d8baa9d",
