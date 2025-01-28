@@ -2,7 +2,7 @@
 #
 # It describes a set of packages to be installed, along with
 # configuration settings.
-# This is testing of the dev-121-multi-target-workflows branch!
+# This is testing of the dev-121-multi-target-workflows branch!!
 spack:
   definitions:
     - ROOT_PACKAGE:
