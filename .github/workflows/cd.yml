@@ -15,4 +15,5 @@ jobs:
       model: ${{ vars.NAME }}
     permissions:
       contents: write
+      pull-requests: write
     secrets: inherit
