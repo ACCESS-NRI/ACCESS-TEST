@@ -5,7 +5,7 @@
 # This is testing the dev-121-multi-target-workflows branch.
 spack:
   specs:
-    - access-test@git.2024.11.16
+    - access-test@git.2025.01.0
   packages:
     oasis3-mct:
       require:
@@ -35,6 +35,6 @@ spack:
           - access-test
           - oasis3-mct
         projections:
-          access-test: '{name}/2024.11.16'
+          access-test: '{name}/2025.01.0'
           oasis3-mct: '{name}/2023.11.09-{hash:7}'
   definitions: []
