@@ -2,28 +2,29 @@
 #
 # It describes a set of packages to be installed, along with
 # configuration settings.
-# This is testing of the dev-121-multi-target-workflows branch!!!
+# This is testing of the 226-relax-specs branch!
 spack:
-  definitions:
-    - ROOT_PACKAGE:
-        - access-test@git.2025.01.1
+  # definitions:
+  #   - ROOT_PACKAGE:
+  #       - access-test@git.2025.01.1=access-test
 
-    # Specific case for Gadi - should be run
-    - when: env['DEPLOYMENT_TARGET'] == 'gadi'
-      compiler_targets:
-        - intel@2021.10.0 target=x86_64
+  #   # Specific case for Gadi - should be run
+  #   - when: env['DEPLOYMENT_TARGET'] == 'gadi'
+  #     compiler_targets:
+  #       - intel@2021.10.0 target=x86_64
 
-    # Default case, shouldn't be used
-    - when: '"DEPLOYMENT_TARGET" not in env'
-      compiler_targets:
-        - gcc@11.2.0 target=x86_64
+  #   # Default case, shouldn't be used
+  #   - when: '"DEPLOYMENT_TARGET" not in env'
+  #     compiler_targets:
+  #       - gcc@11.2.0 target=x86_64
 
-    - ROOT_SPEC:
-      - matrix:
-          - [$ROOT_PACKAGE]
-          - [$%compiler_targets]
+  #   - ROOT_SPEC:
+  #     - matrix:
+  #         - [$ROOT_PACKAGE]
+  #         - [$%compiler_targets]
   specs:
-    - $ROOT_SPEC
+    # - $ROOT_SPEC
+    - access-test@git.2025.01.1=access-test
   packages:
     oasis3-mct:
       require:
