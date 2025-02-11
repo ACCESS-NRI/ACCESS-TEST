@@ -2,7 +2,7 @@
 #
 # It describes a set of packages to be installed, along with
 # configuration settings.
-# This is testing of the 226-relax-specs branch!
+# This is testing of the 226-relax-specs branch!!
 spack:
   # definitions:
   #   - ROOT_PACKAGE:
