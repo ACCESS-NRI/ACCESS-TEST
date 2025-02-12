@@ -1,1 +1,1 @@
-add_executable(my_exe stub.f90)
+add_executable(stub.exe stub.f90)
