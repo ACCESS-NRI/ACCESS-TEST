@@ -5,6 +5,6 @@ program stub
 
     string = "Running ACCESS-TEST stub"
 
-    print *,string
+    print *,trim(string)
 
 end program
