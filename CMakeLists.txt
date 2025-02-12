@@ -7,4 +7,4 @@ enable_language(Fortran)
 # Source code
 add_subdirectory(src)
 
-install(TARGETS stub.ee     DESTINATION "bin")
+install(TARGETS stub.exe     DESTINATION "bin")
