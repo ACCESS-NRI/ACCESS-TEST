@@ -24,7 +24,7 @@ spack:
   #         - [$%compiler_targets]
   specs:
     # - $ROOT_SPEC
-    - access-test@git.2025.01.1=access-test
+    - access-test@git.2025.02.0=access-test
   packages:
     oasis3-mct:
       require:
@@ -39,11 +39,11 @@ spack:
       require:
         - '@4.1.5'
         - 'cppflags="-diag-disable=10441"'
-    # Specifications that apply to all packages - not relevant with multi-target builds
-    # all:
-    #   require:
-    #     - '%intel@2021.10.0'
-    #     - 'target=x86_64'
+        # Specifications that apply to all packages - not relevant with multi-target builds
+        # all:
+        #   require:
+        #     - '%intel@2021.10.0'
+        #     - 'target=x86_64'
   view: true
   concretizer:
     unify: true
@@ -54,5 +54,5 @@ spack:
           - access-test
           - oasis3-mct
         projections:
-          access-test: '{name}/2025.01.1'
+          access-test: '{name}/2025.02.0'
           oasis3-mct: '{name}/2023.11.09-{hash:7}'
