@@ -1,7 +1,8 @@
 ! Copied from https://curc.readthedocs.io/en/latest/programming/MPI-Fortran.html
 
 PROGRAM hello_world_mpi
-include 'mpif.h'
+! include 'mpif.h'
+use mpi
 
 integer process_Rank, size_Of_Cluster, ierror, tag
 
