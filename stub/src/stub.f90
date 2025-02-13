@@ -1,10 +1,15 @@
-program stub
+! Copied from https://curc.readthedocs.io/en/latest/programming/MPI-Fortran.html
 
-    integer :: i
-    character(len=1000) :: string
+PROGRAM hello_world_mpi
+include 'mpif.h'
 
-    string = "Running ACCESS-TEST stub"
+integer process_Rank, size_Of_Cluster, ierror, tag
 
-    print *,trim(string)
+call MPI_INIT(ierror)
+call MPI_COMM_SIZE(MPI_COMM_WORLD, size_Of_Cluster, ierror)
+call MPI_COMM_RANK(MPI_COMM_WORLD, process_Rank, ierror)
 
-end program
+print *, 'Hello World from process: ', process_Rank, 'of ', size_Of_Cluster
+
+call MPI_FINALIZE(ierror)
+END PROGRAM
