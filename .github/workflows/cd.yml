@@ -10,7 +10,7 @@ on:
 jobs:
   cd:
     name: CD
-    uses: access-nri/build-cd/.github/workflows/cd.yml@v4
+    uses: access-nri/build-cd/.github/workflows/cd.yml@237-skip-check-spack-yaml-check-on-draft_TEST
     with:
       model: ${{ vars.NAME }}
     permissions:
