@@ -31,7 +31,7 @@ spack:
         - 'cppflags="-diag-disable=10441"'
     all:
       require:
-        - one_of: [%intel, %oneapi, %gcc]
+        - one_of: ['%intel', '%oneapi', '%gcc']
   view: true
   concretizer:
     unify: true
