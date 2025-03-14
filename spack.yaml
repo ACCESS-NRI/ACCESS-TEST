@@ -6,8 +6,7 @@
 spack:
   definitions:
     - ROOT_PACKAGE:
-        - access-test-model@git.2025.03.1
-
+        - access-test@2025.03.1
     # Specific case for Gadi - should be run
     - when: env['DEPLOYMENT_TARGET'] == 'gadi'
       compiler_targets:
@@ -25,13 +24,16 @@ spack:
   specs:
     - $ROOT_SPEC
   packages:
+    access-test-model:
+     require:
+        - '@git.latest'
     openmpi:
       require:
         - '@4.1.5'
         - 'cppflags="-diag-disable=10441"'
-    all:
+    gcc-runtime:
       require:
-        - one_of: ['%intel', '%oneapi', '%gcc']
+        - '%gcc'
   view: true
   concretizer:
     unify: true
