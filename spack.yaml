@@ -41,5 +41,6 @@ spack:
       tcl:
         include:
           - access-test
+          - access-test-component
         projections:
           access-test: '{name}/2025.03.1'
