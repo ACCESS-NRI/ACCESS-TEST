@@ -24,7 +24,7 @@ spack:
   specs:
     - $ROOT_SPEC
   packages:
-    access-test-model:
+    access-test-component:
      require:
         - '@latest'
     openmpi:
