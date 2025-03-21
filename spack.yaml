@@ -6,8 +6,7 @@
 spack:
   definitions:
     - ROOT_PACKAGE:
-        - access-test@git.2025.01.1
-
+        - access-test@git.2025.03.1
     # Specific case for Gadi - should be run
     - when: env['DEPLOYMENT_TARGET'] == 'gadi'
       compiler_targets:
@@ -25,24 +24,15 @@ spack:
   specs:
     - $ROOT_SPEC
   packages:
-    oasis3-mct:
-      require:
-        - '@git.2023.11.09'
-    netcdf-c:
-      require:
-        - '@4.9.2'
-    netcdf-fortran:
-      require:
-        - '@4.6.1'
+    access-test-component:
+     require:
+        - '@main'
     openmpi:
       require:
         - '@4.1.5'
-        - 'cppflags="-diag-disable=10441"'
-    # Specifications that apply to all packages - not relevant with multi-target builds
-    # all:
-    #   require:
-    #     - '%intel@2021.10.0'
-    #     - 'target=x86_64'
+    gcc-runtime:
+      require:
+        - '%gcc'
   view: true
   concretizer:
     unify: true
@@ -51,7 +41,6 @@ spack:
       tcl:
         include:
           - access-test
-          - oasis3-mct
+          - access-test-component
         projections:
-          access-test: '{name}/2025.01.1'
-          oasis3-mct: '{name}/2023.11.09-{hash:7}'
+          access-test: '{name}/2025.03.1'
