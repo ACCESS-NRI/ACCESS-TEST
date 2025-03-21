@@ -30,7 +30,6 @@ spack:
     openmpi:
       require:
         - '@4.1.5'
-        - 'cppflags="-diag-disable=10441"'
     gcc-runtime:
       require:
         - '%gcc'
