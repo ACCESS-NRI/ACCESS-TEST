@@ -2,11 +2,11 @@
 #
 # It describes a set of packages to be installed, along with
 # configuration settings.
-# This is testing of the dev-121-multi-target-workflows branch!!!
+# This is testing of the 255-spack-packages-concurrent-access-issue
 spack:
   definitions:
     - ROOT_PACKAGE:
-        - access-test@git.2025.03.1
+        - access-test@git.2025.03.2
     # Specific case for Gadi - should be run
     - when: env['DEPLOYMENT_TARGET'] == 'gadi'
       compiler_targets:
@@ -43,4 +43,4 @@ spack:
           - access-test
           - access-test-component
         projections:
-          access-test: '{name}/2025.03.1'
+          access-test: '{name}/2025.03.2'
