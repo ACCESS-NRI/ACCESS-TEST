@@ -6,7 +6,7 @@
 spack:
   definitions:
     - ROOT_PACKAGE:
-        - access-test@git.2025.03.1
+        - access-test@git.2025.03.1 cice=5 +debug
     # Specific case for Gadi - should be run
     - when: env['DEPLOYMENT_TARGET'] == 'gadi'
       compiler_targets:
