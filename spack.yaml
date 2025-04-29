@@ -1,4 +1,4 @@
-# This is a Spack Environment file.
+# This is a Spack Environment file!!
 #
 # It describes a set of packages to be installed, along with
 # configuration settings.
@@ -29,7 +29,7 @@ spack:
   packages:
     access-test-component:
       require:
-        - '@main'
+        - '@git.main'
     openmpi:
       require:
         - '@4.1.5'
