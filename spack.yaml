@@ -1,4 +1,4 @@
-# This is a Spack Environment file.
+# This is a Spack Environment file!!!!!!
 #
 # It describes a set of packages to be installed, along with
 # configuration settings.
@@ -25,11 +25,11 @@ spack:
   #         - [$%compiler_targets]
   specs:
     # - $ROOT_SPEC
-    - access-test@git.2025.04.000
+    - access-test@git.2025.04.001
   packages:
     access-test-component:
       require:
-        - '@main'
+        - '@git.main'
     openmpi:
       require:
         - '@4.1.5'
@@ -51,4 +51,4 @@ spack:
           - access-test
           - access-test-component
         projections:
-          access-test: '{name}/2025.04.000'
+          access-test: '{name}/2025.04.001'
