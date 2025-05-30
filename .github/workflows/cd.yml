@@ -14,7 +14,6 @@ jobs:
     with:
       model: ${{ vars.NAME }}
       spack-manifest-path: ./my-access-test/spack.yaml
-      tag-deployment: false
       upload-to-build-db: false
     permissions:
       contents: write
