@@ -13,6 +13,7 @@ jobs:
     uses: access-nri/build-cd/.github/workflows/cd.yml@225-multi-spack-yaml_TEST
     with:
       model: ${{ vars.NAME }}
+      spack-manifest-path: ./my-access-test/spack.yaml
     permissions:
       contents: write
       pull-requests: write

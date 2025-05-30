@@ -30,6 +30,7 @@ jobs:
       model: ${{ vars.NAME }}
       # root-sbd: if different from vars.NAME
       pr: ${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.event.issue.number }}
+      spack-manifest-path: ./my-access-test/spack.yaml
     permissions:
       pull-requests: write
       contents: write
