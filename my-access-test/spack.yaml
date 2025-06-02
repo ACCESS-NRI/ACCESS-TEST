@@ -25,7 +25,7 @@ spack:
   #         - [$%compiler_targets]
   specs:
     # - $ROOT_SPEC
-    - access-test@git.2025.06.000
+    - access-test@git.2025.06.001
   packages:
     access-test-component:
       require:
@@ -51,4 +51,4 @@ spack:
           - access-test
           - access-test-component
         projections:
-          access-test: '{name}/2025.06.000'
+          access-test: '{name}/2025.06.001'
