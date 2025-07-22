@@ -50,5 +50,6 @@ spack:
         include:
           - access-test
           - access-test-component
+          - openmpi
         projections:
           access-test: '{name}/2025.06.001'
