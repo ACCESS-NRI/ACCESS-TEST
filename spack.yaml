@@ -44,11 +44,3 @@ spack:
   view: true
   concretizer:
     unify: true
-  modules:
-    default:
-      tcl:
-        include:
-          - access-test
-          - access-test-component
-        projections:
-          access-test: '{name}/2025.06.002'
