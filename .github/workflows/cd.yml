@@ -10,7 +10,7 @@ on:
 jobs:
   cd:
     name: CD
-    uses: access-nri/build-cd/.github/workflows/cd.yml@dev-v6
+    uses: access-nri/build-cd/.github/workflows/cd.yml@dev-v6_TEST
     with:
       model: ${{ vars.NAME }}
     permissions:
