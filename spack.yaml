@@ -3,28 +3,7 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
-  ## This section is what would be done for multi-HPC builds - see the commented reference to
-  ## $ROOT_SPEC in spack.specs below.
-  # definitions:
-  #   - ROOT_PACKAGE:
-  #       - access-test@git.2025.03.1
-  #
-  #   # Specific case for Gadi - should be run. Note the check for the environment variable first!
-  #   - when: '"DEPLOYMENT_TARGET" in env and env["DEPLOYMENT_TARGET"] == "gadi"'
-  #     compiler_targets:
-  #       - intel@2021.10.0 target=x86_64
-  #
-  #   # Example default case, should only be used outside of the CI system.
-  #   - when: '"DEPLOYMENT_TARGET" not in env'
-  #     compiler_targets:
-  #       - intel@2021.10.0 target=x86_64
-
-  #   - ROOT_SPEC:
-  #     - matrix:
-  #         - [$ROOT_PACKAGE]
-  #         - [$%compiler_targets]
   specs:
-    # - $ROOT_SPEC
     - access-test@git.2025.06.001
   packages:
     access-test-component:
