@@ -36,6 +36,7 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
+        - 'target=x86_64'
     # When using multi-HPC builds, this spack.packages.all section can be commented out.
     all:
       require:
