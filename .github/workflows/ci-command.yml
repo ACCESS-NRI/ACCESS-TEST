@@ -47,3 +47,5 @@ jobs:
       pull-requests: write
     secrets:
       configs-repo-token: ${{ secrets.CONFIGS_REPO_TOKEN }}
+      commit-gpg-private-key: ${{ secrets.GH_ACTIONS_BOT_GPG_PRIVATE_KEY }}
+      commit-gpg-passphrase: ${{ secrets.GH_ACTIONS_BOT_GPG_PASSPHRASE }}
