@@ -35,9 +35,9 @@ jobs:
       contents: write
     secrets: inherit
 
-  configs:
+  update-configs:
     name: Configs
-    if: startsWith(github.event.comment.body, '!configs') && github.event.issue.pull_request
+    if: startsWith(github.event.comment.body, '!update-configs') && github.event.issue.pull_request
     uses: access-nri/build-cd/.github/workflows/ci-command-configs.yml@prerelease-to-model-configs-pipeline
     with:
       model: ${{ vars.NAME }}
