@@ -18,21 +18,18 @@ spack:
     access-test-component:
       require:
       - '@main'
-    openmpi:
-      require:
-      - '@5.0.8'
     c:
       require:
-      - intel-oneapi-compilers@2025.2.0
+      #- gcc@14.2.0
+      - cce@21.0.0
     cxx:
       require:
-      - intel-oneapi-compilers@2025.2.0
+      #- gcc@14.2.0
+      - cce@21.0.0
     fortran:
       require:
-      - intel-oneapi-compilers@2025.2.0
-    all:
-      prefer:
-      - target=x86_64_v4
+      #- gcc@14.2.0
+      - cce@21.0.0
   view: true
   concretizer:
     unify: true
