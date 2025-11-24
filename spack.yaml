@@ -15,9 +15,12 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
+    intel-oneapi-compilers-classic:
+      require:
+        - '@2021.10.0'
     all:
       require:
-        - '%intel@2021.10.0'
+        - %access_intel
         - 'target=x86_64'
   view: true
   concretizer:
