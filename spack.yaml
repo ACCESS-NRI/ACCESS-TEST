@@ -15,9 +15,17 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
+    c:
+      require:
+        - 'gcc@13.2.0'
+    cxx:
+      require:
+        - 'gcc@13.2.0'
+    fortran:
+      require:
+        - 'gcc@13.2.0'
     all:
       require:
-        - '%intel@2021.10.0'
         - 'target=x86_64'
   view: true
   concretizer:
