@@ -20,7 +20,7 @@ spack:
         - '@2021.10.0'
     all:
       require:
-        - %access_intel
+        - '%access_intel'
         - 'target=x86_64'
   view: true
   concretizer:
