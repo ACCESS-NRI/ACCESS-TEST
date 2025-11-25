@@ -17,8 +17,7 @@ spack:
         - '%gcc'
     all:
       require:
-        - '%intel@2021.10.0'
-        - 'target=x86_64'
+        - '%gcc@14.2.0'
   view: true
   concretizer:
     unify: true
