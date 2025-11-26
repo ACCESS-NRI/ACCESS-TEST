@@ -3,8 +3,11 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
+  definitions:
+  - _name: [access-test]
+  - _version: [2025.09.000]
   specs:
-    - access-test@git.2025.09.000
+    - access-test
   packages:
     access-test-component:
       require:
@@ -17,8 +20,7 @@ spack:
         - '%gcc'
     all:
       require:
-        - '%intel@2021.10.0'
-        - 'target=x86_64'
+        - '%access_intel'
   view: true
   concretizer:
     unify: true
