@@ -20,7 +20,7 @@ spack:
         - '%gcc'
     all:
       require:
-        - '%access_intel'
+        - '%access_oneapi'
   view: true
   concretizer:
     unify: true
