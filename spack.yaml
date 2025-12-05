@@ -3,8 +3,12 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
+  definitions:
+  # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
+  - _name: [access-test]
+  - _version: [2025.09.000]
   specs:
-  - access-test@git.2025.09.000
+  - access-test
   packages:
     access-test-component:
       require:
