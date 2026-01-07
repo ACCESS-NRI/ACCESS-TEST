@@ -3,20 +3,35 @@
   "profiles": {
 
     "default": {
-      "configs_repo": "ACCESS-NRI/YOUR_CONFIG_REPO_HERE",
+      "configs_repo": "ACCESS-NRI/access-test-configs",
       "configs": {
-        "dev-YOUR_CONFIG_HERE": {
+        "dev-01deg_jra55_iaf": {
           "checks": {
             "repro": true
           }
+        },
+        "dev-01deg_jra55_ryf": {
+          "checks": {
+            "repro": false
+          }
         }
-      },
-      "dev-YOUR_OTHER_CONFIG_HERE": {
-        "checks": {
-          "repro": false
+      }
+    },
+
+    "qa-only": {
+      "configs_repo": "ACCESS-NRI/access-test-configs",
+      "configs": {
+        "dev-01deg_jra55_iaf": {
+          "checks": {
+            "repro": false
+          }
+        },
+        "dev-01deg_jra55_ryf": {
+          "checks": {
+            "repro": false
+          }
         }
       }
     }
-
   }
 }
