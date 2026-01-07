@@ -8,12 +8,10 @@ jobs:
   redeploy:
     name: Redeploy
     if: startsWith(github.event.comment.body, '!redeploy') && github.event.issue.pull_request
-    uses: access-nri/build-cd/.github/workflows/ci.yml@v6
+    uses: access-nri/build-cd/.github/workflows/ci.yml@v7
     with:
       model: ${{ vars.NAME }}
-      # root-sbd: if different from vars.NAME
       pr: ${{ github.event.issue.number }}
-      # TODO: Check versions are appropriate
       spack-manifest-schema-version: 1-0-7
       config-versions-schema-version: 3-0-0
       config-packages-schema-version: 1-0-0
@@ -22,26 +20,22 @@ jobs:
       contents: write
       statuses: write
     secrets: inherit
-
   bump:
     name: Bump
     if: startsWith(github.event.comment.body, '!bump') && github.event.issue.pull_request
-    uses: access-nri/build-cd/.github/workflows/ci-comment.yml@v6
+    uses: access-nri/build-cd/.github/workflows/ci-comment.yml@v7
     with:
       model: ${{ vars.NAME }}
-      # root-sbd: if different from vars.NAME
     permissions:
       pull-requests: write
       contents: write
     secrets: inherit
-
-  update-configs:
+  configs:
     name: Configs
     if: startsWith(github.event.comment.body, '!update-configs') && github.event.issue.pull_request
-    uses: access-nri/build-cd/.github/workflows/ci-command-configs.yml@prerelease-to-model-configs-pipeline
+    uses: access-nri/build-cd/.github/workflows/ci-command-configs.yml@v7
     with:
       model: ${{ vars.NAME }}
-      # root-sbd: if different from vars.NAME
       auto-configs-pr-schema-version: 1-0-0
     permissions:
       pull-requests: write
