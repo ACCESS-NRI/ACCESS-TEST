@@ -20,7 +20,7 @@ jobs:
   pr-ci:
     name: CI
     if: github.event.action != 'closed'
-    uses: access-nri/build-cd/.github/workflows/ci.yml@v8
+    uses: access-nri/build-cd/.github/workflows/ci.yml@334-spack-v1-migration-config-removal-from-manifest_TEST
     with:
       model: ${{ vars.NAME }}
       # root-sbd: if different from vars.NAME
@@ -36,7 +36,7 @@ jobs:
   pr-closed:
     name: Closed
     if: github.event.action == 'closed'
-    uses: access-nri/build-cd/.github/workflows/ci-closed.yml@v8
+    uses: access-nri/build-cd/.github/workflows/ci-closed.yml@334-spack-v1-migration-config-removal-from-manifest_TEST
     with:
       root-sbd: access-test
     secrets: inherit
