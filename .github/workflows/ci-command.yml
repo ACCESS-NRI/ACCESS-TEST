@@ -8,10 +8,9 @@ jobs:
   redeploy:
     name: Redeploy
     if: startsWith(github.event.comment.body, '!redeploy') && github.event.issue.pull_request
-    uses: access-nri/build-cd/.github/workflows/ci.yml@v7
+    uses: access-nri/build-cd/.github/workflows/ci.yml@342-name-reserved-def-as-sbr_TEST
     with:
       model: ${{ vars.NAME }}
-      pr: ${{ github.event.issue.number }}
       spack-manifest-schema-version: 1-0-7
       config-versions-schema-version: 3-0-0
       config-packages-schema-version: 1-0-0
@@ -23,7 +22,7 @@ jobs:
   bump:
     name: Bump
     if: startsWith(github.event.comment.body, '!bump') && github.event.issue.pull_request
-    uses: access-nri/build-cd/.github/workflows/ci-comment.yml@v7
+    uses: access-nri/build-cd/.github/workflows/ci-comment.yml@342-name-reserved-def-as-sbr_TEST
     with:
       model: ${{ vars.NAME }}
     permissions:
@@ -33,7 +32,7 @@ jobs:
   configs:
     name: Configs
     if: startsWith(github.event.comment.body, '!update-configs') && github.event.issue.pull_request
-    uses: access-nri/build-cd/.github/workflows/ci-command-configs.yml@v7
+    uses: access-nri/build-cd/.github/workflows/ci-command-configs.yml@342-name-reserved-def-as-sbr_TEST
     with:
       model: ${{ vars.NAME }}
       auto-configs-pr-schema-version: 1-0-0
