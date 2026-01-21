@@ -8,8 +8,8 @@ spack:
   - _name: [access-test]
   - _version: [2026.01.000]
   specs:
-  - access-test ^cmake@3.31.6
-  - access-test ^cmake@3.31.8
+  - access-test ^curl+gssapi
+  - access-test ^curl~gssapi
   packages:
     access-test-component:
       require:
@@ -32,4 +32,4 @@ spack:
       - 'target=x86_64'
   view: true
   concretizer:
-    unify: true
+    unify: false
