@@ -16,18 +16,17 @@ spack:
     openmpi:
       require:
       - '@4.1.5'
-    gcc-runtime:
+    c:
       require:
-      - '%access_gcc'
-
-    # Compilers
-    intel-oneapi-compilers-classic:
+      - 'intel-oneapi-compilers@2025.2.0'
+    cxx:
       require:
-      - '@2021.10.0'
-
+      - 'intel-oneapi-compilers@2025.2.0'
+    fortran:
+      require:
+      - 'intel-oneapi-compilers@2025.2.0'
     all:
-      require:
-      - '%access_intel'
+      prefer:
       - 'target=x86_64'
   view: true
   concretizer:
