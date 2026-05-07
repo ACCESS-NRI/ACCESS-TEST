@@ -15,7 +15,7 @@ spack:
       - '@main'
     openmpi:
       require:
-      - '@4.1.5'
+      - '@5.0.8'
     c:
       require:
       - 'intel-oneapi-compilers@2025.2.0'
