@@ -7,6 +7,11 @@ spack:
   # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
   - _name: [access-test]
   - _version: [2026.06.000]
+  # _spack-version and _custom-scopes inform the branch of spack to use, and custom scopes if applicable, respectively
+  - _spack-version: ["1.1"]
+  # Release database provenance information - packages for inclusion into the database, and packages just for injection into the modules
+  - _provenance: ["access-test-component"]
+  - _injection: ["openmpi"]
   specs:
   - access-test
   packages:
@@ -31,3 +36,8 @@ spack:
   view: true
   concretizer:
     unify: true
+  repos:
+    access_spack_packages:
+      git: https://github.com/ACCESS-NRI/access-spack-packages.git
+      tag: 2026.05.003
+      destination: $env/package-repos/access-spack-packages
